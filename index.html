@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Aruham's personal website">
+<meta name="author" content="Mohamed Aruham">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<title>Mohamed Aruham</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/e5698c9a2a.js" crossorigin="anonymous"></script>
+<link href="style.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+        <div class="inner">
+            <nav class="nav justify-content-center">
+                <a class="nav-link" href="https://aruham.dev/">Home</a>
+                <a class="nav-link" href="https://blog.aruham.dev">Blog</a>
+                <a class="nav-link" href="https://www.github.com/phoenixatom">GitHub</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/mohamedaruham/">LinkedIn</a>
+                <a class="nav-link" href="mailto:hello@aruham.dev">Mail</a>
+                <a class="nav-link" data-toggle="modal" data-target="#spotifyModal" href="#">Now Playing</a>
+            </nav>  
+        </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <img src="images/logo.png" class="img-fluid logo" alt="Logo">
+            <h2>Hey Guys!</h2>
+            <h2>I am a <span class="typing"></span></h2>
+        </main>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="spotifyModal" tabindex="-1" role="dialog" aria-labelledby="spotifyModal" aria-hidden="true">
+          <div class="modal-dialog black" role="document">
+            <div class="modal-content black">
+              <div class="modal-header black">
+                <h5 class="modal-title" id="spotifyModal">Now Playing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body black">
+                <p>
+                  <a href="https://spotify-github-profile.vercel.app/api/view?uid=9zrk84889nvcz187zcdwb903y&amp;redirect=true">
+                    <img src="https://spotify-github-profile.vercel.app/api/view?uid=9zrk84889nvcz187zcdwb903y&amp;cover_image=true&amp;theme=default" alt="spotify-github-profile">
+                  </a>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <iframe src="https://open.spotify.com/follow/1/?uri=spotify:user:9zrk84889nvcz187zcdwb903y&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p><strong>Copyright ©
+                <script type="text/javascript">document.write(new Date().getFullYear())</script>
+                <a href="https://aruham.dev/"> Mohamed Aruham</a>.</strong> All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous"></script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="692a60e91061b758ca5e76c7-|49" defer=""></script></body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var typed = new Typed('.typing',{
+          strings: ["Software Developer", "Security Consultant", "Pro Procastinator", "Gamer?"],
+          loop: true,
+          typeSpeed: 65,
+          backSpeed: 65
+        });
+    </script>
+</body>
+</html>
