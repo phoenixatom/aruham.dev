@@ -69,11 +69,20 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.typing{
-  color:#0099cc
+.typing {
+  color: #0099cc;
 }
 
-.logo{
-    padding-bottom: 30px;
-    height: 150px;
+.logo {
+  padding-bottom: 30px;
+  height: 150px;
+}
+
+.close {
+  color: white;
+}
+
+#spotifyModal .black {
+  background-color: #121212;
+  color: white;
 }
