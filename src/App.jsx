@@ -71,30 +71,30 @@ function ProfileHeader() {
   return (
     <div className="flex flex-col items-center text-center mb-8 pt-12 pb-4">
       <img
-        src="/images/aruham.png"
+        src="/images/aruham.jpg"
         alt="Mohamed Aruham"
-        className="w-24 h-24 rounded-full object-cover mb-4 ring-2 ring-white/10"
+        className="w-24 h-24 rounded-full object-cover mb-4 ring-2 ring-black/10"
       />
-      <h1 className="text-2xl font-bold mb-3">Mohamed Aruham</h1>
-      <p className="text-sm text-gray-400 max-w-md leading-relaxed px-4">
-        A software developer and startup co-founder, I turn bold ideas into powerful, user-friendly products. I love building clean, scalable systems that solve real problems. Currently leading SeaStack, where we create tech that works beautifully and grows with purpose.
+      <h1 className="text-2xl font-bold mb-3 text-black">Mohamed Aruham</h1>
+      <p className="text-sm text-neutral-500 max-w-md leading-relaxed px-4">
+        A systems engineer and startup co-founder, I turn bold ideas into powerful, user-friendly products. I love building clean, scalable systems that solve real problems. Currently leading SeaStack, where we create tech that works beautifully and grows with purpose.
       </p>
     </div>
   )
 }
 
-function BentoCard({ href, icon, title, subtitle, accent, className = '' }) {
+function BentoCard({ href, icon, title, subtitle, className = '' }) {
   const content = (
-    <div className="p-5 flex flex-col justify-between h-full" style={{ background: `${accent}12` }}>
+    <div className="p-5 flex flex-col justify-between h-full">
       <div className="flex items-start justify-between">
-        <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: `${accent}25` }}>
-          <span style={{ color: accent }}>{icon}</span>
+        <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-black/5">
+          <span className="text-neutral-700">{icon}</span>
         </div>
-        {href && <span className="text-white/40"><ArrowUpRightIcon /></span>}
+        {href && <span className="text-black/30"><ArrowUpRightIcon /></span>}
       </div>
       <div className="mt-auto pt-4">
-        <p className="font-semibold text-sm text-white">{title}</p>
-        {subtitle && <p className="text-xs mt-0.5" style={{ color: `${accent}bb` }}>{subtitle}</p>}
+        <p className="font-semibold text-sm text-black">{title}</p>
+        {subtitle && <p className="text-xs mt-0.5 text-neutral-500">{subtitle}</p>}
       </div>
     </div>
   )
@@ -111,12 +111,12 @@ function BentoCard({ href, icon, title, subtitle, accent, className = '' }) {
 
 function QuoteCard() {
   return (
-    <div className="bento-card col-span-2 md:col-span-4" style={{ background: '#f5a62312' }}>
+    <div className="bento-card col-span-2 md:col-span-4">
       <div className="p-6 flex flex-col justify-center items-center text-center">
-        <p className="text-gray-300 text-sm italic leading-relaxed">
+        <p className="text-neutral-500 text-sm italic leading-relaxed">
           "And on, and off, and on, and off, and on, and off, and on, and off, and on, and off."
         </p>
-        <p className="text-xs text-gray-500 mt-3">— Neil Hilborn</p>
+        <p className="text-xs text-neutral-400 mt-3">— Neil Hilborn</p>
       </div>
     </div>
   )
@@ -125,14 +125,14 @@ function QuoteCard() {
 function SectionDivider({ title }) {
   return (
     <div className="section-divider col-span-2 md:col-span-4">
-      <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">{title}</span>
+      <span className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">{title}</span>
     </div>
   )
 }
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-4 pb-16">
         <ProfileHeader />
 
@@ -143,28 +143,24 @@ function App() {
             icon={<XIcon />}
             title="Twitter"
             subtitle="@aruhamm"
-            accent="#1DA1F2"
           />
           <BentoCard
             href="https://instagram.com/arhamm.m"
             icon={<InstagramIcon />}
             title="Instagram"
             subtitle="@arhamm.m"
-            accent="#E1306C"
           />
           <BentoCard
             href="https://linkedin.com/in/mohamedaruham"
             icon={<LinkedInIcon />}
             title="LinkedIn"
             subtitle="Let's connect"
-            accent="#0A66C2"
           />
           <BentoCard
             href="https://github.com/phoenixatom"
             icon={<GitHubIcon />}
             title="GitHub"
             subtitle="phoenixatom"
-            accent="#8B5CF6"
           />
         </div>
 
@@ -175,7 +171,6 @@ function App() {
             icon={<BlogIcon />}
             title="Personal Blog"
             subtitle="blog.aruham.dev"
-            accent="#F472B6"
           />
         </div>
 
@@ -186,14 +181,12 @@ function App() {
             icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>}
             title="Systems Engineer"
             subtitle="Stealth Startup"
-            accent="#A78BFA"
           />
           <BentoCard
             href="http://seastack.mv"
             icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>}
             title="CTO"
             subtitle="seastack.mv"
-            accent="#06B6D4"
           />
         </div>
 
@@ -205,7 +198,6 @@ function App() {
             icon={<PlaneIcon />}
             title="GAN Flights"
             subtitle="API for GAN flights"
-            accent="#34D399"
             className="col-span-2"
           />
           <BentoCard
@@ -213,7 +205,6 @@ function App() {
             icon={<CalendarIcon />}
             title="Setup a meeting"
             subtitle="Calendly"
-            accent="#F59E0B"
             className="col-span-2"
           />
 
@@ -222,28 +213,24 @@ function App() {
             icon={<CodeIcon />}
             title="Dhivehi Faker"
             subtitle="faker.baivaru.net"
-            accent="#FB923C"
           />
           <BentoCard
             href="https://github.com/phoenixatom/DhivatarSharp"
             icon={<GitHubIcon />}
             title="Dhivatars in .NET"
             subtitle="GitHub repository"
-            accent="#60A5FA"
           />
           <BentoCard
             href="https://github.com/phoenixatom/baivaru-faker-vscode"
             icon={<CodeIcon />}
             title="BaivaruFaker"
             subtitle="VSCode Extension"
-            accent="#C084FC"
           />
           <BentoCard
             href="https://www.credly.com/users/mohamed-aruham"
             icon={<AwardIcon />}
             title="Certifications"
             subtitle="View on Credly"
-            accent="#FBBF24"
           />
 
           <QuoteCard />
