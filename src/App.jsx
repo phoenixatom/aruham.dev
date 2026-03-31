@@ -1,3 +1,4 @@
+import SpriteWalker from './Sprite'
 import './App.css'
 
 const XIcon = () => (
@@ -69,16 +70,18 @@ const PlaneIcon = () => (
 
 function ProfileHeader() {
   return (
-    <div className="flex flex-col items-center text-center mb-8 pt-12 pb-4">
+    <div className="flex flex-col items-center text-center mb-8 pt-12 pb-4 relative">
       <img
         src="/images/aruham.jpg"
         alt="Mohamed Aruham"
         className="w-24 h-24 rounded-full object-cover mb-4 ring-2 ring-black/10"
       />
       <h1 className="text-2xl font-bold mb-3 text-black">Mohamed Aruham</h1>
-      <p className="text-sm text-neutral-500 max-w-md leading-relaxed px-4">
-        A systems engineer and startup co-founder, I turn bold ideas into powerful, user-friendly products. I love building clean, scalable systems that solve real problems. Currently leading SeaStack, where we create tech that works beautifully and grows with purpose.
-      </p>
+      <SpriteWalker>
+        <p data-bio className="text-sm text-neutral-500 max-w-md leading-relaxed px-4">
+          A systems engineer and startup co-founder, I turn bold ideas into powerful, user-friendly products. I love building clean, scalable systems that solve real problems. Currently leading SeaStack, where we create tech that works beautifully and grows with purpose.
+        </p>
+      </SpriteWalker>
     </div>
   )
 }
