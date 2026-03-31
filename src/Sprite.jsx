@@ -2,9 +2,15 @@ import { useEffect, useRef } from 'react'
 
 // ── Spring physics ───────────────────────────────────────────────────
 function stepSpring(s, dt) {
-  const f = -3000 * (s.v - s.t) - 50 * s.d
-  s.d += f * dt
-  s.v += s.d * dt
+  const steps = Math.ceil(dt / 0.008)
+  const sub = dt / steps
+  for (let i = 0; i < steps; i++) {
+    const f = -1800 * (s.v - s.t) - 35 * s.d
+    s.d += f * sub
+    s.v += s.d * sub
+  }
+  s.v = Math.max(-20, Math.min(20, s.v))
+  s.d = Math.max(-800, Math.min(800, s.d))
   if (Math.abs(s.v - s.t) < 0.01 && Math.abs(s.d) < 0.1) { s.v = s.t; s.d = 0 }
 }
 
